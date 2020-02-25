@@ -11,7 +11,9 @@ public class TopicoForm {
 	
 	@NotNull @NotEmpty
 	private String titulo;
+	@NotNull @NotEmpty
 	private String mensagem;
+	@NotNull @NotEmpty
 	private String nomeCurso;
 	
 	public String getTitulo() {
@@ -35,7 +37,7 @@ public class TopicoForm {
 	}
 	
 	public Topico convert(CursoRepository cursoRepository) {
-
+	
 		Curso curso = cursoRepository.findByNome(nomeCurso);
 		Topico topico = new Topico(	titulo, mensagem, curso);
 		
