@@ -27,7 +27,7 @@ public class Usuario implements UserDetails {
 	private String senha;
 	
 	@ManyToAny(fetch = FetchType.EAGER, metaColumn = @Column)
-	private List<Perfil> perfis = new ArrayList<Perfil>();
+	private List<Perfil> perfis = new ArrayList<>();
 
 	@Override
 	public int hashCode() {
